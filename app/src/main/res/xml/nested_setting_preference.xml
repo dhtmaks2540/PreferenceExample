@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="keyword"
+        android:summary="등록된 키워드가 포함된 메시지는 채팅방 알림이 꺼져있어도 푸시 알림을 받게 되어 키워드는 강조되어 보여집니다."
+        android:title="키워드 알림" />
+    <ListPreference
+        android:dependency="keyword"
+        android:entries="@array/array_voice"
+        android:entryValues="@array/array_voice"
+        android:key="keyword_sound_list"
+        android:summary="카톡"
+        android:title="키워드 전용 알림음" />
+</PreferenceScreen>
