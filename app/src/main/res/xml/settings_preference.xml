@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory android:title="메시지 알림">
+        <CheckBoxPreference
+            android:key="vibrate"
+            android:summary="진동 울림으로 알림을 받으려면 체크하세요"
+            android:title="진동" />
+
         <SwitchPreference
             android:key="message"
+            android:summary="메시지 알림을 받으려면 체크하세요"
             android:title="메시지 알림" />
 
         <Preference
             android:key="keyword_screen"
             android:summary="사용 안 함"
-            android:title="키워드 알림" />
+            android:title="키워드 알림"
+            app:fragment="kr.co.lee.preferenceexapmle.NestedSettingPreferenceFragment" />
 
         <SwitchPreference
             android:key="sound"
